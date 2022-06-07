@@ -45,7 +45,7 @@ const Sidebar: FC = () => {
       color="gray"
     >
       <Flex flexDirection="column" paddingTop="20px" height="100%">
-        <Box width="120px" marginBottom="20px" paddingX="20px">
+        <Box width="120px" marginBottom="20px" paddingX="20px" marginX="auto">
           <NextImage src="/logo.svg" height={60} width={120} />
         </Box>
         <Box marginBottom="20px">
