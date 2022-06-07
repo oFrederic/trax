@@ -1,5 +1,5 @@
-export default function fetcher(target: string, data = undefined) {
-  return fetch(`${window.location.origin}/api/${target}`, {
+export default async function fetcher(target: string, data = undefined) {
+  const res = await fetch(`${window.location.origin}/api${target}`, {
     method: data ? "POST" : "GET",
     credentials: "include",
     headers: {
@@ -7,4 +7,7 @@ export default function fetcher(target: string, data = undefined) {
     },
     body: JSON.stringify(data),
   });
+
+  if (res.status > 299 && res.status < 200) throw new Error();
+  return res.json();
 }
