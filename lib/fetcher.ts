@@ -8,6 +8,6 @@ export default async function fetcher(target: string, data = undefined) {
     body: JSON.stringify(data),
   });
 
-  if (res.status > 299 && res.status < 200) throw new Error();
+  if (res.status > 399 && res.status < 200) throw new Error();
   return res.json();
 }
