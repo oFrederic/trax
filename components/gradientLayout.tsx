@@ -14,9 +14,9 @@ const GradientLayout = ({
     <Box
       height="100%"
       overflowY="auto"
-      bgGradient={`linear(${color}.500 0%, ${color}.600 10%, ${color}.700 30%, rgba(0,0,0,0.95) 50%)`}
+      bgGradient={`linear(${color}.500 0%, ${color}.600 10%, ${color}.700 30%, rgba(0,0,0,0.90) 50%)`}
     >
-      <Flex bg={`${color}.600`} padding="20px" align="end">
+      <Flex bg={`${color}.600`} padding="50px 20px 20px" align="end">
         <Box>
           <Image
             boxSize="160px"
@@ -33,7 +33,7 @@ const GradientLayout = ({
           <Text fontSize="x-small">{description}</Text>
         </Box>
       </Flex>
-      {children}
+      <Box padding="50px 20px 20px">{children}</Box>
     </Box>
   );
 };
