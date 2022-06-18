@@ -39,7 +39,7 @@ const Sidebar: FC = () => {
   return (
     <Box
       width="100%"
-      height="calc(100vh - 100px)"
+      height="100%"
       bg="black"
       paddingX="5px"
       color="gray"
